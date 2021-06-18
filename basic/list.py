@@ -96,3 +96,24 @@ areas_1=areas+["poolhouse", 24.5]
 areas_2=areas_1+["garage",15.45]
 
 #####DELETE ELEMENT ##########
+areas = ["hallway", 11.25, "kitchen", 18.0,
+        "chill zone", 20.0, "bedroom", 10.75,
+         "bathroom", 10.50, "poolhouse", 24.5,
+         "garage", 15.45]
+         
+del(areas[0])   #delete hallway
+print(areas)
+
+####Change the second command, that creates the variable areas_copy, such that areas_copy is an explicit copy of areas. After your edit, changes made to areas_copy shouldn't affect areas. Submit the answer to check this.####
+# Create list areas
+
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Create areas_copy
+areas_copy = list(areas)
+
+# Change areas_copy
+areas_copy[0] = 5.0
+
+# Print areas
+print(areas) ##[11.25, 18.0, 20.0, 10.75, 9.50]
