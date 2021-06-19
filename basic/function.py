@@ -22,6 +22,3 @@ full_sorted2=sorted(full , reverse=True) ##buyukten kuucuge
 print(full_sorted)
 print(full_sorted2)
 
-#### METHODS(OBJECT FUNCTION) ####
-print(full_sorted)
-print(full_sorted2)
