@@ -2,10 +2,12 @@
 # NumPy (Numerical Python) pip3 install numpy
 import numpy as np
 # Create list baseball
-print(np.version.version)
+
 baseball = [180, 215, 210, 210, 188, 176, 209, 200]
 
 # Create a numpy array from baseball: np_baseball
+np_baseball=np.array(baseball)
+print(np_baseball)
 
 x = [4 , 9 , 6, 3, 1]
 x[1]
@@ -22,3 +24,7 @@ y[1]
 #print(light)  // [ True  True  True ...  True  True  True]
 # Print out BMIs of all baseball players whose BMI is below 21
 #print(bmi[light])
+
+
+
+##### 2D NUMPY ARRAY   ######
