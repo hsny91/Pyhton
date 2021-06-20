@@ -34,6 +34,10 @@ baseball = [[180, 78.4],
             [215, 102.7],
             [210, 98.5],
             [188, 75.2]]
+updated = [[180, 78.4],
+            [215, 102.7],
+            [210, 98.5],
+            [188, 75.2]]
 
 # Import numpy
 import numpy as np
@@ -68,3 +72,22 @@ conversion=np.array([0.0254,0.453592,1.])
 
 # Print out product of np_baseball and conversion
 print(np_baseball*conversion)
+
+
+#######BASIC STATISTIC ##########
+
+# mean() => it is used to total sum of the values (or observations) divided by the number of values.
+# median() => The median of a sample of numeric data is the value that lies in the middle when we sort the data. 
+#corrcoef() =>
+# std() => 
+# sum() =>
+# sort() =>
+
+# Create np_height_in from np_baseball
+np_height_in=np_baseball[:,0]
+
+# Print out the mean of np_height_in (ortalama)
+print(np.mean(np_height_in))
+
+# Print out the median of np_height_in(tam ortadaki deger)
+print(np.median(np_height_in))
