@@ -6,8 +6,6 @@ pop=[10.5,20.5,8.5,9,10,10,10]
 plt.plot(year,pop)
 plt.show()  # show line
 
-import matplotlib.pyplot as plt
-
 gdp_cap=[2000,2001,2002,2003,2004,2005,2006]
 life_exp=[10.5,20.5,8.5,9,10,10,10]
 plt.scatter(gdp_cap, life_exp)  # nokta nokta gosterim
