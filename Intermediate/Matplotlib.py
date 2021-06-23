@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 year=[2000,2001,2002,2003,2004,2005,2006]
 pop=[10.5,20.5,8.5,9,10,10,10]
@@ -55,6 +56,7 @@ plt.show()
 
 #### SCATTER ######
 ### plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2, c=col, alpha= 0.8) s means size, c means color and it calls a array, alpha means transparency
+
 plt.scatter(gdp_cap, life_exp)  # nokta nokta gosterim
 
 # Put the x-axis on a logarithmic scale
@@ -63,8 +65,19 @@ plt.xscale('log')
 # Show plot
 plt.show()
 
-import matplotlib.pyplot as plt
-life_exp=[10.5,20.5,8.5,9,10,10,10]
+# Specify c and alpha inside plt.scatter()
+plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2, c=col, alpha= 0.8)
+
+# Previous customizations
+plt.xscale('log') 
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+plt.xticks([1000,10000,100000], ['1k','10k','100k'])
+
+# Show the plot
+plt.show()
+
 #########  HISTOGRAM  #########
 # plt.hist(value, bins=20)
 # plt.show() displays a plot;
