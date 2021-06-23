@@ -54,7 +54,7 @@ plt.xticks(tick_val, tick_lab)
 plt.show()
 
 #### SCATTER ######
-
+### plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2, c=col, alpha= 0.8) s means size, c means color and it calls a array, alpha means transparency
 plt.scatter(gdp_cap, life_exp)  # nokta nokta gosterim
 
 # Put the x-axis on a logarithmic scale
@@ -91,3 +91,6 @@ plt.hist(life_exp, bins=20)
 # Show and clean up again
 plt.show()
 plt.clf()
+
+
+
