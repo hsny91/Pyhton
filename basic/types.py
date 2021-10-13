@@ -5,7 +5,7 @@
 0.51,0.34, 
 
 ### String#####
-'String'
+name ='String'
 
 ###Bolean###
 True (1)
@@ -26,3 +26,6 @@ int(True):1
 ###Variable ####
 my_variable = 10
 total_min = 43
+
+import sys
+print(sys.version)
