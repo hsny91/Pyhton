@@ -4,7 +4,8 @@ print(5 - 5)
 
 # Multiplication, division, modulo, and exponentiation
 print(3 * 5)
-print(10 / 2)
+print(11/2) ## float
+print(11//2) ## result is rounded
 print(18 % 7) # Modulo:
 print(4 ** 2) # Exponentiation
 
