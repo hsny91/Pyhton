@@ -2,6 +2,12 @@ a = "is"
 b = "nice"
 my_list = ["my", "list", a, b]
 
+#Lists can contain strings, floats, and integers. We can nest other lists, and we can also nest tuples and other data structures. 
+#The same indexing conventions apply for nesting:
+# Sample List
+
+["Michael Jackson", 10.1, 1982, [1, 2], ("A", 1)]
+
 # area variables (in square meters)
 hall = 11.25
 kit = 18.0
@@ -84,6 +90,7 @@ areas[-1]=10.50
 # Change "living room" to "chill zone"
 areas[4]="chill zone"
 
+print(areas)
 ####### ADD ELEMENT AND CONCAT ######
 # Create the areas list and make some changes
 areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
@@ -95,6 +102,16 @@ areas_1=areas+["poolhouse", 24.5]
 # Add garage data to areas_1, new list is areas_2
 areas_2=areas_1+["garage",15.45]
 
+####### EXTEND ELEMENT  ######
+# Use extend to add elements to list
+
+L = [ "Michael Jackson", 10.2]
+L.extend(['pop', 2])
+print(L) ##['Michael Jackson', 10.2, 'pop', 2]
+
+L.append(['pop', 10])
+print(L)  ## ['Michael Jackson', 10.2, 'pop', 2, ['pop', 10]]
+ 
 #####DELETE ELEMENT ##########
 areas = ["hallway", 11.25, "kitchen", 18.0,
         "chill zone", 20.0, "bedroom", 10.75,
@@ -107,6 +124,7 @@ print(areas)
 ####Change the second command, that creates the variable areas_copy, such that areas_copy is an explicit copy of areas. After your edit, changes made to areas_copy shouldn't affect areas. Submit the answer to check this.####
 # Create list areas
 
+
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 
 # Create areas_copy
@@ -118,4 +136,31 @@ areas_copy[0] = 5.0
 # Print areas
 print(areas) ##[11.25, 18.0, 20.0, 10.75, 9.50]
 
-print("hello word")
+#######SPLIT #######
+B = 'hard rock'.split()
+print(B) ## ['hard', 'rock']
+
+# Split the string by comma
+
+C= 'A,B,C,D'.split(',')
+print(C)  ## ['A', 'B', 'C', 'D']
+
+###### COPY AND CLONE LIST #####
+A = ["hard rock", 10, 1.2]
+B = A
+print('A:', A) #('A:', ['hard rock', 10, 1.2])
+print('B:', B) #('B:', ['hard rock', 10, 1.2])
+
+
+## If we change the first element in A to "banana", we get an unexpected side effect.
+print('B[0]:', B[0]) ## B[0]: hard rock
+A[0] = "banana"
+print('B[0]:', B[0]) ## B[0]: banana
+
+## CLONE
+# Clone (clone by value) the list A
+item_List = ["hard rock", 10, 1.2]
+clone_list = item_List[:]
+print('clone_list[0]:', clone_list[0]) ## ('clone_list[0]:', 'hard rock')
+item_List[0] = "hard rock"
+print('clone_list [0]:', clone_list [0]) ## ('clone_list[0]:', 'hard rock')
