@@ -1,3 +1,4 @@
+#List is mutable
 a = "is"
 b = "nice"
 my_list = ["my", "list", a, b]
