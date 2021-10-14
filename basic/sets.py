@@ -32,3 +32,18 @@ print(intersection) # {'AC/DC', 'Back in Black'}
 # Find the difference in set1 but not set2
 print(album_set1.difference(album_set2)) # {'Thriller'}
 print(album_set2.difference(album_set1)) # {'The Dark Side of the Moon'}
+
+# Use intersection method to find the intersection of album_list1 and album_list
+print(album_set1.intersection(album_set2)) # {'AC/DC', 'Back in Black'}  
+
+# Find the union of two sets
+print(album_set1.union(album_set2)) # {'AC/DC', 'Back in Black', 'The Dark Side of the Moon', 'Thriller'}
+
+# Check if superset
+print(set(album_set1).issuperset(album_set2) ) # false
+
+# Check if subset
+print(set({"Back in Black", "AC/DC"}).issubset(album_set1)) # True
+
+# Check if superset
+print(album_set1.issuperset({"Back in Black", "AC/DC"}) # True  
