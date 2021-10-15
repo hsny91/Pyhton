@@ -28,3 +28,11 @@ for i, square in enumerate(squares):
 ### WHILE lOOP #######
 
 # The while loop exists as a tool for repeated execution based on a condition. The code block will keep being executed until the given logical condition returns a False boolean value.
+
+# While Loop Example
+
+dates = [1982, 1980, 1973, 2000]
+i = 0
+while(dates[i]!=1973):
+    print(dates[i])
+    i = i+1
