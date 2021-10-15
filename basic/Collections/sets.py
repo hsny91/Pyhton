@@ -45,5 +45,3 @@ print(set(album_set1).issuperset(album_set2) ) # false
 # Check if subset
 print(set({"Back in Black", "AC/DC"}).issubset(album_set1)) # True
 
-# Check if superset
-print(album_set1.issuperset({"Back in Black", "AC/DC"}) # True  
