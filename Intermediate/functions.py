@@ -33,7 +33,7 @@ def Equation(a,b):
         c = 5
     return(c)
 
-##### Built-in function
+#%% Built-in function
 str1 = "denmem"
 str2= "1005"
 print(str1)
@@ -64,6 +64,12 @@ def isGoodRating(rating=4):
 isGoodRating() # this album sucks it's rating is 4
 isGoodRating(10) # this album is good its rating is 10
 
+
+#%% default and flexible function
+def cember_cevresi_hesapla(r,pi =3.14):
+    output = 2*pi*r
+    return output
+
 # When the number of arguments are unknown for a function, They can all be packed into a tuple as shown:
 def printAll(*args): # All the arguments are 'packed' into args which can be treated like a tuple
     print("No of arguments:", len(args)) 
@@ -81,3 +87,12 @@ def printDictionary(**args):
         print(key + " : " + args[key])
 
 printDictionary(Country='Canada',Province='Ontario',City='Toronto')
+
+def hesapla(kilo,boy,*args):
+    output = boy+kilo+args[0]
+    return output
+hesapla(1,2,3,4,5)
+
+#%%Lamda Function
+sonuc2 = lambda x : x*x 
+print(sonuc2(2)) ##4
