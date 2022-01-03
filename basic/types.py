@@ -12,16 +12,16 @@ True (1)
 False (0)
 
 ####Type Learn####
-type(True): bool
-type(1):int
+type(True) #bool
+type(1)  #int
 
 ####Types Casting###
-float(2):2.0
-int(1.1):1
-int('1'):1
-int('A'): it does not work
-bool(1): True
-int(True):1
+float(2) #2.0
+int(1.1) #1
+int('1') #1
+int('A') # it does not work
+bool(1) #True
+int(True) #1
 
 ###Variable ####
 my_variable = 10

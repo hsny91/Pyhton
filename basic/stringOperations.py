@@ -1,3 +1,10 @@
+
+s = "bugun gunlerden pazartesi"
+variable_type =type(s) 
+print(s)
+print(variable_type()) #str
+
+
 name = 'Husniye Sekeroglu'
 print(name[0]) # 'H'
 print(name[-1]) # 'u'

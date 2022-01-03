@@ -1,4 +1,15 @@
-#### FUNCTION DEFINE #######
+#### FUNCTION #######
+#%% User Defined Function
+def my_first_function(var1, var2):
+    """
+    parametre:var1, var2
+    return:output
+  
+    """
+    output= (var1+var2)*50
+    return output
+print(my_first_function(4,6))
+
 def add(a):
     b=a+1
     print(a, b)
@@ -22,7 +33,15 @@ def Equation(a,b):
         c = 5
     return(c)
 
-###### Pre-defined functions ######## 
+##### Built-in function
+str1 = "denmem"
+str2= "1005"
+print(str1)
+
+float(10) # int to float 10.0
+int(10.0) # float to int 10
+round(10.7) # 11
+int(str2) # 1005
     
 # Build-in function print()
 album_ratings = [10.0, 8.5, 9.5, 7.0, 7.0, 9.5, 9.0, 9.5] 
