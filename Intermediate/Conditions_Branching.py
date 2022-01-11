@@ -30,6 +30,7 @@ print("move on")
 
 ####### Logical Operators #######
 ## AND, OR, NOT
+print(1>0 and 4<5) #true
 
 # Condition statement example
 
@@ -39,3 +40,33 @@ if(album_year < 1980) or (album_year > 1989):
     print ("Album was not made in the 1980's")
 else:
     print("The Album was made in the 1980's ")
+
+###EXAMPLE###
+liste=[1,2,3,4,5,6]
+value= 6
+if value in liste:
+    print("yes {} value in the list".format(value))
+else:
+    print("no")
+
+# 1640= 17.yy 109= 2.yy
+# input year >1 and year<2005
+
+def findCenturyYear(pYear):
+    if pYear<1 or pYear>2005:
+        print("please enter certain value")
+    else:
+        str_year=str(pYear)
+        if(len(str_year)<3):
+            return 1
+        elif(len(str_year)==3):
+            if(str_year[1:3]=="00"):
+                return int(str_year[0])
+            else:
+                return int(str_year[0])+1
+        else:
+            if(str_year[2:4]=="00"):
+                return int(str_year[:2])
+            else:
+                return int(str_year[:2])+1
+print("century: ",findCenturyYear(99))
