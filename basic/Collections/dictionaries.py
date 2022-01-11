@@ -34,3 +34,8 @@ print(release_year_dict)
 
 # Verify the key is in the dictionary
 print('The Bodyguard' in release_year_dict) # True
+
+##KEY, VALUE####
+print(release_year_dict.keys()) #dict_keys(['Back in Black', 'The Dark Side of the Moon', 'The Bodyguard', 'Bat Out of Hell', 'Their Greatest Hits (1971-1975)', 'Saturday Night Fever', 'Rumours'])
+print(release_year_dict.values()) # dict_values(['1980', '1973', '1992', '1977', '1976', '1977', '1977'])
+print(type(release_year_dict.values()))  # <class 'dict_values'>

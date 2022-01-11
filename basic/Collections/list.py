@@ -165,3 +165,11 @@ clone_list = item_List[:]
 print('clone_list[0]:', clone_list[0]) ## ('clone_list[0]:', 'hard rock')
 item_List[0] = "hard rock"
 print('clone_list [0]:', clone_list [0]) ## ('clone_list[0]:', 'hard rock')
+
+
+###LIST METHOD #######
+##appende(lement) append object to end
+##remove(element) elemeni siler
+##reverse(): ters ceviri
+##sort(): siralar
+##count(element): return numbrt of occurences of value
