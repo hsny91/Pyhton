@@ -98,3 +98,27 @@ print(arrayT)
 #[[1 4 7]
 # [2 5 8]
 # [3 6 9]]
+#resize methodu da kullnailabilir. ancak bu method kaynak methodu degistirir.
+
+#STACKING ARRAY
+array_1=np.array([[1,2],[3,4]])
+array_2=np.array([[-1,-2],[-3,-4]])
+stack_array_vertical=np.vstack((array_1,array_2))
+stack_array_horizantal=np.hstack((array_1,array_2))
+print(stack_array_horizantal)
+# [[ 1  2 -1 -2]
+#  [ 3  4 -3 -4]]
+print(stack_array_vertical)
+# [[ 1  2]
+#  [ 3  4]
+#  [-1 -2]
+#  [-3 -4]]
+
+##CONVERT AND COPY ARRAY
+
+#list convert array
+liste =[1,2,3,4]
+array = np.array([5,6,7,8])
+arrayNew=np.array(liste) # convert array
+liste2=list(arrayNew) # convert list
+
