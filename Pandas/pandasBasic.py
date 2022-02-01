@@ -106,9 +106,8 @@ print(dataFrame1[dataFrame1.AGE > 60])
 import numpy as np
 
 ortalama_maas = dataFrame1.MAAS.mean()
-
 # ortalama_maas_np = np.mean(dataFrame1.MAAS)
-
+print("ortalma maas", ortalama_maas) # 195.0
 
 dataFrame1["maas_seviyesi"] = ["dusuk" if ortalama_maas > each else "yuksek" for each in dataFrame1.MAAS]
 
@@ -116,11 +115,10 @@ dataFrame1["maas_seviyesi"] = ["dusuk" if ortalama_maas > each else "yuksek" for
 #    if(ortalama_maas > each):
 #        print("dusuk")
 #    else:
-#        print("yukse")
+#        print("yuksek")
         
 
-dataFrame1.columns
-
+print(dataFrame1.columns) # column name ['NAME', 'AGE', 'MAAS', 'yeni_feature', 'maas_seviyesi'],
 
 dataFrame1.columns = [ each.lower() for each in dataFrame1.columns] 
 
@@ -137,7 +135,18 @@ data2 = dataFrame1.tail()
 
 # vertical
 data_concat = pd.concat([data1,data2],axis=0)
-
+print(data_concat)
+#     name  age  maas maas_seviyesi
+# 0    ali   15   100         dusuk
+# 1   veli   16   150         dusuk
+# 2  kenan   17   240        yuksek
+# 3  hilal   33   350        yuksek
+# 4   ayse   45   110         dusuk
+# 1   veli   16   150         dusuk
+# 2  kenan   17   240        yuksek
+# 3  hilal   33   350        yuksek
+# 4   ayse   45   110         dusuk
+# 5  evren   66   220        yuksek
 
 # horizontal
 
@@ -145,6 +154,14 @@ maas = dataFrame1.maas
 age = dataFrame1.age
 
 data_h_concat = pd.concat([maas,age],axis=1)
+print(data_h_concat)
+#    maas  age
+# 0   100   15
+# 1   150   16
+# 2   240   17
+# 3   350   33
+# 4   110   45
+# 5   220   66
 
 
 # %% transforming data
@@ -158,9 +175,15 @@ def multiply(age):
     
 dataFrame1["apply_metodu"] = dataFrame1.age.apply(multiply)
 
+print(dataFrame1)
 
-
-
+#     name  age  maas maas_seviyesi  list_comp  apply_metodu
+# 0    ali   15   100         dusuk         30            30
+# 1   veli   16   150         dusuk         32            32
+# 2  kenan   17   240        yuksek         34            34
+# 3  hilal   33   350        yuksek         66            66
+# 4   ayse   45   110         dusuk         90            90
+# 5  evren   66   220        yuksek        132           132
 
 
 
