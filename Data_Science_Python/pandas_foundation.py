@@ -58,3 +58,26 @@ data2["date"] = datetime_object
 
 data2= data2.set_index("date")
 print(data2)
+
+# Now we can select according to our date index
+print(data2.loc["1993-03-16"])
+print(data2.loc["1992-03-10":"1993-03-16"])
+
+# Needs string to specify frequency like "M" = month or "A" = year
+# We will use data2 that we create at previous part
+data2.resample("A").mean() ## yillara gore sample olusturur ve bunlarin ortalamsini alir.Ornekte 1192 ve 1993 deki tum degerlerin ortlamasini alip 3 satir seklinde yazdiracak.
+         
+         #           Name Type 1  Type 2  HP  Attack  Defense  Sp. Atk  Sp. Def  Speed  Generation  Legendary
+# date                                                                                                            
+# 1992-03-10  3       Venusaur  Grass  Poison  80      82       83      100      100     80           1      False
+# 1993-03-15  4  Mega Venusaur  Grass  Poison  80     100      123      122      120     80           1      False
+# 1993-03-16  5     Charmander   Fire     NaN  39      52       43       60       50     65           1      False
+
+# Lets resample with month
+data2.resample("M").mean()
+
+# We can interpolete from first value
+data2.resample("M").first().interpolate("linear")##bosluklari linear seklinde doldurur.
+
+# Or we can interpolate with mean()
+data2.resample("M").mean().interpolate("linear")

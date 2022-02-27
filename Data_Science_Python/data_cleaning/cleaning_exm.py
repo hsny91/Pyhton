@@ -4,7 +4,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
+import seaborn as sns
 
 
 
@@ -119,3 +119,48 @@ data['city-L/100km'] = 235/data["city-mpg"]
 data['length'] = data['length']/data['length'].max()
 data['width'] = data['width']/data['width'].max()
 
+
+#### Correlation
+print(data.corr())
+print(data[['bore', 'stroke', 'compression-ratio', 'horsepower']].corr())
+
+
+### Value Counts
+print(data['drive-wheels'].value_counts())
+data_frame = data['drive-wheels'].value_counts().to_frame() # We can convert the series to a dataframe as follows
+print(data_frame)
+
+
+
+#### Positive Linear Relationship 
+sns.regplot(x="engine-size", y="price", data=data)
+plt.ylim(0,)
+sns.regplot(x="highway-mpg", y="price", data=data)
+
+#### Categorical Variables$
+sns.boxplot(x = "body-style",y = "price", data = data)
+
+# fuel-type"
+sns.boxplot(x="fuel-type", y="price", data=data)
+
+# drive-wheels
+sns.boxplot(x="drive-wheels", y="price", data=data)
+
+
+######   Basics of Grouping #########
+
+print(data['drive-wheels'].unique())
+# ['rwd' 'fwd' '4wd']
+
+df_gptest = data[['drive-wheels','body-style','price']]
+grouped_test1 = df_gptest.groupby(['drive-wheels','body-style'],as_index=False).mean()
+print(grouped_test1)
+
+grouped_pivot = grouped_test1.pivot(index='drive-wheels',columns='body-style')
+
+grouped_pivot = grouped_pivot.fillna(0) #fill missing values with 0
+
+plt.pcolor(grouped_pivot, cmap = 'RdBu')
+plt.colorbar()
+plt.show()
+ 
