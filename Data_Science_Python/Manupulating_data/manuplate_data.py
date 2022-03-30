@@ -26,8 +26,6 @@ data.loc[1:10,-1,"HP":"Defense"] # 10 and "Defense" are inclusive reverse 10 dan
 data.loc[1:10,"Speed":]  # From something to end
 
 
-
-
 ## FILTERING DATA FRAMES
 
 boolean = data.HP >200  ## RETURN TRUE OR FALSE
@@ -36,10 +34,7 @@ data[boolean]
 first_filter = data.HP > 150 
 second_filter = data.Speed > 35
 data[first_filter & second_filter]
-
 data.HP[data.Speed <15]
-
-
 
 #Transforming Data
 
@@ -49,13 +44,9 @@ data.HP.apply(div)
 
 data.HP.apply(lambda n : n/2)
 
-
-
 # Defining column using other columns
 data["total_power"] = data.Attack + data.Defense
 data.head()
-
-
 
 ###INDEX OBJECTS AND LABELED DATA
 
